@@ -31,4 +31,93 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_build_profile" />
 
+    <LinearLayout
+            android:id="@+id/layout_checkbox_cancer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_conditions">
+
+        <CheckBox
+                android:id="@+id/checkbox_cancer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Cancer"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_blood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_cancer">
+
+        <CheckBox
+                android:id="@+id/checkbox_blood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Blood"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_diabetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_blood">
+
+        <CheckBox
+                android:id="@+id/checkbox_diabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Diabetes"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_depression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_diabetes">
+
+        <CheckBox
+                android:id="@+id/checkbox_depression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Depression"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
