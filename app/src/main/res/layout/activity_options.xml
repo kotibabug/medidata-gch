@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+    >
+
+        <TextView
+                android:id="@+id/text_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be Informed!  Health Options for you."
+                style="@style/Header"
+                android:layout_marginTop="50dp"
+        />
+
+        <LinearLayout
+                android:id="@+id/layout_area_lose_weight1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#40339966"
+        >
+
+            <!--<TextView-->
+                    <!--android:id="@+id/small_title1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="5 items found"-->
+                    <!--style="@style/SmallText"/>-->
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:text="T"/>
+
+                <!--<ImageView-->
+                        <!--android:layout_width="60dp"-->
+                        <!--android:layout_height="60dp"-->
+                        <!--android:src="@drawable/weight3"-->
+                        <!--android:layout_margin="5dp"-->
+                <!--/>-->
+                <TextView
+                        android:id="@+id/text_area_weight1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Treatments"
+                        android:layout_gravity="center_vertical"
+                        style="@style/NormalText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_area_lose_weight2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#40FF9900"
+        >
+
+            <!--<TextView-->
+                    <!--android:id="@+id/small_title2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="2 Items found"-->
+                    <!--style="@style/SmallText"/>-->
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:text="C"/>
+                <TextView
+                        android:id="@+id/text_area_weight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clinical Trials"
+                        android:layout_gravity="center_vertical"
+                        style="@style/NormalText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_area_lose_weight3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#40FFFF99"
+        >
+
+            <!--<TextView-->
+                    <!--android:id="@+id/small_title3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="1 Items found"-->
+                    <!--style="@style/SmallText"/>-->
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:text="G"/>
+
+                <TextView
+                        android:id="@+id/text_area_weight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Guidelines"
+                        android:layout_gravity="center_vertical"
+                        style="@style/NormalText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_area_lose_weight4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#403374c8"
+        >
+
+            <!--<TextView-->
+                    <!--android:id="@+id/small_title4"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="1 Items found"-->
+                    <!--style="@style/SmallText"/>-->
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:text="O"/>
+
+                <TextView
+                        android:id="@+id/text_area_weight4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:layout_gravity="center_vertical"
+                        style="@style/NormalText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
