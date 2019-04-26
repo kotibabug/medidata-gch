@@ -73,8 +73,7 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUI(gAccount: GoogleSignInAccount?) {
         // we have an account sign in from google
         if (gAccount != null) {
-            Toast.makeText(this, "success ${gAccount.email}", Toast.LENGTH_SHORT).show()
-            btn_gsingin.visibility = View.GONE
+            startActivity(Intent(this, BuildProfileActivity::class.java))
         } else {
             btn_gsingin.visibility = View.VISIBLE
         }
