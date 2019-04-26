@@ -11,6 +11,7 @@ import android.R.attr.data
 import android.support.v4.app.FragmentActivity
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.tasks.Task
 import com.google.android.gms.common.api.ApiException
@@ -40,6 +41,8 @@ class LoginActivity : AppCompatActivity() {
         val gName = account?.account?.name
         updateUI(account)
 
+        googleSignInClient?.revokeAccess()
+
         setClickListener()
 
     }
@@ -61,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.w("LoginActivity", "signInResult:failed code=" + e.statusCode)
+            Toast.makeText(this, "failure ${e.message}", Toast.LENGTH_SHORT).show()
             updateUI(null)
         }
 
@@ -69,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUI(gAccount: GoogleSignInAccount?) {
         // we have an account sign in from google
         if (gAccount != null) {
+            Toast.makeText(this, "success ${gAccount.email}", Toast.LENGTH_SHORT).show()
             btn_gsingin.visibility = View.GONE
         } else {
             btn_gsingin.visibility = View.VISIBLE
