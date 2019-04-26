@@ -5,7 +5,9 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 
 object Api {
@@ -22,4 +24,7 @@ object Api {
 interface ApiService {
     @POST("users.json")
     fun createProfile(@Body user: User): Call<User>
+
+    @GET("studies.json")
+    fun getResult(@Query("condition") condition: String, @Query("gender") gender: String, @Query("age") age: String,  @Query("country") country: String)
 }
