@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LoginButton" parent="Button">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:background">@color/active_blue</item>
+        <item name="android:padding">8dp</item>
+        <!--<item name="android:background">@drawable/login_form_log_in_button_states</item>-->
+    </style>
+
 </resources>
