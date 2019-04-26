@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btn_save.setOnClickListener {
-            startActivity(Intent(this, ArticlesActivity::class.java))
+            startActivity(Intent(this, BuildProfileActivity::class.java))
         }
     }
 

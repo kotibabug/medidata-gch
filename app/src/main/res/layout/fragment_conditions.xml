@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:text="Build Your Profile"
             style="@style/Header"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,5 +30,107 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_build_profile" />
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_cancer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_conditions">
+
+        <CheckBox
+                android:id="@+id/checkbox_cancer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Cancer"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_blood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_cancer">
+
+        <CheckBox
+                android:id="@+id/checkbox_blood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Blood"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_diabetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_blood">
+
+        <CheckBox
+                android:id="@+id/checkbox_diabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Diabetes"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_checkbox_depression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_checkbox_diabetes">
+
+        <CheckBox
+                android:id="@+id/checkbox_depression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                style="@style/Question"
+                android:text="Depression"
+                android:textColor="#000"
+                android:padding="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LoginButton"
+            android:text="Next"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
