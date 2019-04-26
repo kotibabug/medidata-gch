@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MeHealth</string>
+    <string name="app_name">MediHealth</string>
+    <string name="next">Next</string>
 </resources>

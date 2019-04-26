@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              style="@style/Header"
+              android:layout_marginTop="20dp"
+              android:layout_gravity="center_horizontal"
+    />
+
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MediHealth - powering smarter treatments and healthier people through Cloud-based information."
+            android:textColor="@android:color/black"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+    />
+
+    <TextView
+            android:id="@+id/next"
+            style="@style/LoginButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+    />
+</LinearLayout>
