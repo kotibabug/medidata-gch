@@ -2,14 +2,24 @@ package com.medidata.mehealth
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.medidata.mehealth.api.Api
+import com.medidata.mehealth.api.ApiService
 import kotlinx.android.synthetic.main.activity_profile.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class BuildProfileActivity : AppCompatActivity() {
+
+    public var user: User? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         setUpView()
+        user = User()
     }
 
     private fun setUpView() {
@@ -21,6 +31,40 @@ class BuildProfileActivity : AppCompatActivity() {
 
     public fun goNext() {
         pager.setCurrentItem(pager.currentItem + 1, true)
+    }
+
+    public fun setProfileData(
+        name: String,
+        age: String,
+        weight: String,
+        height: String,
+        gender: String,
+        ethnicity: String,
+        smoker: String
+    ) {
+        user?.name = name
+        user?.age = age
+        user?.weigth = weight
+        user?.height = height
+        user?.gender = gender
+        user?.ethincity = ethnicity
+        user?.smoker = smoker
+    }
+
+    public fun sendUserProfile() {
+        user?.let {
+            Api.service?.createProfile(it)?.enqueue(object : Callback<User> {
+                override fun onFailure(call: Call<User>, t: Throwable) {
+                    Log.e("response failed ", t.message)
+                }
+
+                override fun onResponse(call: Call<User>, response: Response<User>) {
+                    Log.e("response sucess", "test")
+                }
+
+            })
+        }
+
     }
 
 }

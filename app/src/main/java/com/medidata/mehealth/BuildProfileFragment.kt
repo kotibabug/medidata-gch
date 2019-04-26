@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_build_profile.*
 import android.widget.Toast
-import kotlinx.android.synthetic.main.fragment_build_profile.*
+
 
 class BuildProfileFragment : Fragment() {
 
@@ -32,7 +32,15 @@ class BuildProfileFragment : Fragment() {
             }
         }
         btn_next.setOnClickListener {
-            (activity as BuildProfileActivity).goNext()
+            (activity as BuildProfileActivity).setProfileData(
+                edit_name.text.toString()
+                , edit_age.text.toString(),
+                edit_weigth.text.toString(), edit_height.text.toString(),
+                edit_gender.text.toString(), edit_ethnicity.text.toString(),
+                edit_smoking.text.toString()
+            )
+            (activity as BuildProfileActivity).sendUserProfile()
+           // (activity as BuildProfileActivity).goNext()
         }
     }
 }
