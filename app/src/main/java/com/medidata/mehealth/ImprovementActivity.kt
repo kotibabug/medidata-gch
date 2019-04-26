@@ -10,8 +10,4 @@ class ImprovementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_improvement)
     }
-
-    private fun createButtons() {
-        val button1 = LayoutInflater.from(this).inflate(R.layout.area_button, null)
-    }
 }

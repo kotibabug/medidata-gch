@@ -52,6 +52,10 @@ class LoginActivity : AppCompatActivity() {
             val signInIntent = googleSignInClient?.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+
+        btn_save.setOnClickListener {
+            startActivity(Intent(this, ArticlesActivity::class.java))
+        }
     }
 
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
