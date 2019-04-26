@@ -1,12 +1,13 @@
 package com.medidata.mehealth
 
-class User {
-    public var name: String? = null
-    public var age: String? = null
-    public var weigth: String? = null
-    public var height: String? = null
-    public var gender: String? = null
-    public var ethincity: String? = null
-    public var smoker: String? = null
+object User {
+     var email: String? = null
+     var name: String? = null
+     var age: String? = null
+     var weigth: String? = null
+     var height: String? = null
+     var gender: String? = null
+     var ethincity: String? = null
+     var smoker: String? = null
 }
 

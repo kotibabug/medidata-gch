@@ -1,5 +1,6 @@
 package com.medidata.mehealth
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,14 +13,11 @@ import retrofit2.Response
 
 class BuildProfileActivity : AppCompatActivity() {
 
-    public var user: User? = null
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         setUpView()
-        user = User()
+
     }
 
     private fun setUpView() {
@@ -42,29 +40,28 @@ class BuildProfileActivity : AppCompatActivity() {
         ethnicity: String,
         smoker: String
     ) {
-        user?.name = name
-        user?.age = age
-        user?.weigth = weight
-        user?.height = height
-        user?.gender = gender
-        user?.ethincity = ethnicity
-        user?.smoker = smoker
+        User?.name = name
+        User?.age = age
+        User?.weigth = weight
+        User?.height = height
+        User?.gender = gender
+        User?.ethincity = ethnicity
+        User?.smoker = smoker
     }
 
     public fun sendUserProfile() {
-        user?.let {
-            Api.service?.createProfile(it)?.enqueue(object : Callback<User> {
-                override fun onFailure(call: Call<User>, t: Throwable) {
-                    Log.e("response failed ", t.message)
-                }
 
-                override fun onResponse(call: Call<User>, response: Response<User>) {
-                    Log.e("response sucess", "test")
-                }
+        Api.service?.createProfile(User)?.enqueue(object : Callback<User> {
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("response failed ", t.message)
+            }
 
-            })
-        }
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                startActivity(Intent(this@BuildProfileActivity, ImprovementActivity::class.java))
+            }
 
+        })
     }
+
 
 }

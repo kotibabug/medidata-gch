@@ -19,7 +19,7 @@ class BuildProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        edit_gender.setOnClickListener {
+       /* edit_gender.setOnClickListener {
             MDPopupDialog(activity).apply {
                 startBtnHandler = {
                     Toast.makeText(context, "male", Toast.LENGTH_SHORT).show()
@@ -30,7 +30,7 @@ class BuildProfileFragment : Fragment() {
                 create()
                 show()
             }
-        }
+        }*/
         btn_next.setOnClickListener {
             (activity as BuildProfileActivity).setProfileData(
                 edit_name.text.toString()
@@ -39,8 +39,7 @@ class BuildProfileFragment : Fragment() {
                 edit_gender.text.toString(), edit_ethnicity.text.toString(),
                 edit_smoking.text.toString()
             )
-            (activity as BuildProfileActivity).sendUserProfile()
-           // (activity as BuildProfileActivity).goNext()
+            (activity as BuildProfileActivity).goNext()
         }
     }
 }

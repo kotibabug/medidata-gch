@@ -77,6 +77,7 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUI(gAccount: GoogleSignInAccount?) {
         // we have an account sign in from google
         if (gAccount != null) {
+            User.email = gAccount.email
             startActivity(Intent(this, BuildProfileActivity::class.java))
         } else {
             btn_gsingin.visibility = View.VISIBLE
