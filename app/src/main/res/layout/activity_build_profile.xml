@@ -7,6 +7,86 @@
         android:layout_height="match_parent"
         tools:context=".BuildProfileActivity">
 
+    <TextView
+            android:id="@+id/text_build_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build Your Profile"
+            style="@style/Header"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+            android:id="@+id/image_wellness"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_build_profile"
+            android:layout_marginTop="40dp" />
+
+
+    <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            app:layout_constraintTop_toBottomOf="@id/image_wellness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+    <EditText
+            android:id="@+id/edit_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            app:layout_constraintTop_toBottomOf="@id/edit_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+    <EditText
+            android:id="@+id/edit_weigth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Weigth"
+            app:layout_constraintTop_toBottomOf="@id/edit_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+    <EditText
+            android:id="@+id/edit_height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Height"
+            app:layout_constraintTop_toBottomOf="@id/edit_weigth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
+
+    <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LoginButton"
+            android:text="Next"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
