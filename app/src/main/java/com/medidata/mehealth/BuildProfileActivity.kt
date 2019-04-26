@@ -19,4 +19,8 @@ class BuildProfileActivity : AppCompatActivity() {
         indicator.setupWithViewPager(pager, false)
     }
 
+    public fun goNext() {
+        pager.setCurrentItem(pager.currentItem + 1, true)
+    }
+
 }
