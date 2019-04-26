@@ -27,78 +27,97 @@
             app:layout_constraintTop_toBottomOf="@id/text_build_profile"
             android:layout_marginTop="40dp" />
 
-
-    <EditText
-            android:id="@+id/edit_name"
+    <TextView
+            android:id="@+id/text_blood_pressure"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            app:layout_constraintTop_toBottomOf="@id/image_wellness"
+            android:text="What was your last blood pressure reading?"
+            style="@style/Question"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
+            app:layout_constraintTop_toBottomOf="@id/image_wellness" />
 
-    <EditText
-            android:id="@+id/edit_age"
+    <LinearLayout
+            android:id="@+id/layout_bloodpressure_edit"
+            android:orientation="horizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Age"
-            app:layout_constraintTop_toBottomOf="@id/edit_name"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
+            app:layout_constraintTop_toBottomOf="@id/text_blood_pressure">
 
-    <EditText
-            android:id="@+id/edit_weigth"
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="/"/>
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/text_cholesterol"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Weigth"
-            app:layout_constraintTop_toBottomOf="@id/edit_age"
+            android:text="What was your last cholesterol level reading?"
+            style="@style/Question"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
-
-    <EditText
-            android:id="@+id/edit_height"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Height"
-            app:layout_constraintTop_toBottomOf="@id/edit_weigth"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
-
-    <EditText
-            android:id="@+id/edit_ethnicity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Ethnicity"
-            app:layout_constraintTop_toBottomOf="@id/edit_height"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
+            app:layout_constraintTop_toBottomOf="@id/layout_bloodpressure_edit" />
 
     <EditText
             android:id="@+id/edit_smoking"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Smoking"
-            app:layout_constraintTop_toBottomOf="@id/edit_ethnicity"
+            app:layout_constraintTop_toBottomOf="@id/text_cholesterol"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp" />
+
+    <TextView
+            android:id="@+id/text_heartrate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="What was your last heart reading?"
+            style="@style/Question"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_smoking" />
+
+    <EditText
+            android:id="@+id/edit_heartrate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Heart Rate"
+            app:layout_constraintTop_toBottomOf="@id/text_heartrate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp" />
 
     <TextView
             android:id="@+id/btn_next"
