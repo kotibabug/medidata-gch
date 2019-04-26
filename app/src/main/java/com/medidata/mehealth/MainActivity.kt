@@ -1,5 +1,6 @@
 package com.medidata.mehealth
 
+import android.content.Intent
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity(),SensorEventListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        btn_login.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }
 
