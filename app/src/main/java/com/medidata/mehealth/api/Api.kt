@@ -1,5 +1,6 @@
 package com.medidata.mehealth.api
 
+import com.medidata.mehealth.Article
 import com.medidata.mehealth.User
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -26,5 +27,5 @@ interface ApiService {
     fun createProfile(@Body user: User): Call<User>
 
     @GET("studies.json")
-    fun getResult(@Query("condition") condition: String, @Query("gender") gender: String, @Query("age") age: String,  @Query("country") country: String)
+    fun getResult(@Query("condition") condition: String, @Query("gender") gender: String, @Query("age") age: String,  @Query("country") country: String): Call<List<Article>>
 }

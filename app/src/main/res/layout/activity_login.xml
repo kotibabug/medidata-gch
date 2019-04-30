@@ -37,6 +37,7 @@
             android:text="Save"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"
+            android:visibility="gone"
             android:layout_marginBottom="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

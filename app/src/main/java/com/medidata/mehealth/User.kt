@@ -9,5 +9,6 @@ object User {
      var gender: String? = null
      var ethincity: String? = null
      var smoker: String? = null
+     var condition: String? = null
 }
 
